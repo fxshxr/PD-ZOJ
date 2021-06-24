@@ -99,7 +99,7 @@ nav{
 .triangle{
     position: fixed;
     right: 100px;
-    top: 700px;
+    bottom: 100px;
     border-radius: 100px;
     background-color: rgba(212, 212, 212, 0.726);
 	width: 60px;
@@ -211,5 +211,8 @@ box-shadow: 11px 9px 28px 1px rgba(0, 112, 137, 0.513);
 }
 
 .rr{
+    text-decoration: underline;
+}
+.active{
     text-decoration: underline;
 }
