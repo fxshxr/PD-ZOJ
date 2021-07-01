@@ -27,11 +27,11 @@
     <main class="header" id="top">
         <nav>
          <div class="container" >
-                <a href="index.html" class="logo">Sport<i><b>Vibes</b></i></a>
+                <a href="index.php" class="logo">Sport<i><b>Vibes</b></i></a>
                 
-                <a href="meditations.html" class="link">Медитации</a>
-                <a href="food.html" class="link">Питание</a>
-                <a href="index.html" class="link">Главная</a>
+                <a href="meditations.php" class="link">Медитации</a>
+                <a href="food.php" class="link">Питание</a>
+                <a href="index.php" class="link">Главная</a>
                
                 
          </div>

@@ -26,11 +26,11 @@
     <main class="header" id="top">
         <nav>
          <div class="container" >
-                <a href="index.html" class="logo">Sport<i><b>Vibes</b></i></a>
+                <a href="index.php" class="logo">Sport<i><b>Vibes</b></i></a>
                 
-                <a href="trainings.html" class="link">Тренировки</a>
-                <a href="food.html" class="link">Питание</a>
-                <a href="index.html" class="link ">Главная</a>
+                <a href="trainings.php" class="link">Тренировки</a>
+                <a href="food.php" class="link">Питание</a>
+                <a href="index.php" class="link ">Главная</a>
                 
                 
          </div>

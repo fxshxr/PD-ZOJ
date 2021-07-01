@@ -26,10 +26,10 @@
     <main class="header" id="top">
         <nav>
          <div class="container" >
-                <a href="index.html" class="logo">Sport<i><b>Vibes</b></i></a>
-                <a href="trainings.html" class="link">Тренировки</a>
-                <a href="meditations.html" class="link">Медитации</a>
-                <a href="index.html" class="link">Главная</a>
+                <a href="index.php" class="logo">Sport<i><b>Vibes</b></i></a>
+                <a href="trainings.php" class="link">Тренировки</a>
+                <a href="meditations.php" class="link">Медитации</a>
+                <a href="index.php" class="link">Главная</a>
                 
                 
          </div>
@@ -82,6 +82,64 @@
 		<li>Контроль эпилепсии</li>
 	</ul>
 	<img class="righty image5" src="images/7.png">
+
+    <h1 class="mid">Калькулятор калорий</h1>
+    <p>Ниже введите свой рост и вес чтобы узнать вашу дневную норму калорий и норму если вы хотите создать дефицит калорий</p>
+    <input type="number" id='age' min='5' placeholder="Возраст"  required/>
+        <input type="number" id='height' min='80' placeholder="Рост" required />
+        <input type="number" id='weight' min='20' placeholder="Вес" required />
+
+        <select  id="sel"  required >
+            <option value="m" id="m" name="m">Мужской</option>
+            <option value="f" id="f" name ='f' >Женский</option>
+        </select>
+        <select  id="sel1"  required>
+            <option value="1.2" id="a1" name="a1"> минимальная активность (отсутствие физических нагрузок, сидячая работа, минимум движения)</option>
+            <option value="1.375" id="a2" name ='a2' >небольшая активность (легкие тренировки или прогулки, небольшая дневная активность в течение дня)</option>
+            <option value="1.46" id="a3" name="a3"> средняя активность (тренировки 4-5 раз в неделю, хорошая активность в течение дня)</option>
+            <option value="1.55" id="a4" name ='a4' >активность выше среднего (интенсивные тренировки 5-6 раз в неделю, хорошая активность в течение дня)</option>
+            <option value="1.64" id="a5" name ='a5' > повышенная активность  (ежедневные тренировки, высокая дневная активность)</option>
+            <option value="1.72" id="a6" name="a6">высокая активность (ежедневные ультра-интенсивные тренировки и высокая дневная активность)</option>
+            <option value="1.9" id="a7" name ='a7' >очень высокая активность (обычно речь идет о спортсменах в период соревновательной активности)</option>
+        </select>
+        <input type="button" id="button"  value="Расчитать" /> 
+
+        <p>Оптимальное кол-во калорий для поддержания веса: <span id="opt"></span></p>
+        <p>Создание дефицита калорий для похудания: <span id="hud"></span></p>
+        <br>
+        <br>
+    
+    <script>
+        button.onclick = function() {
+        var val = document.getElementById('sel').value;
+        var val1 = document.getElementById('sel1').value;
+        var wh = document.getElementById('weight').value;
+        var he = document.getElementById('height').value;
+        var ag = document.getElementById('age').value;
+        var result = (9.99 * wh) + (6.25 * he) - (4.95 * ag);
+        
+        if (val == 'm'){
+            result +=5;
+            result*=val1;
+            var norm = Math.floor( result * (result*0.001));
+            var def = Math.floor( result - (result*0.2));
+            
+            document.getElementById('opt').innerHTML= norm + ' ккал';
+            document.getElementById('hud').innerHTML= def + ' ккал';
+        }
+        else{
+            result -=161;
+            result*=val1;
+            var norm = Math.floor( result * (result*0.001));
+            var def = Math.floor( result - (result*0.2));
+            console.log(norm,def);
+            document.getElementById('opt').innerHTML= norm + ' ккал';
+            document.getElementById('hud').innerHTML= def + ' ккал';
+        };
+            };
+
+    </script>
+
             </div>
         </div>
     </main>
